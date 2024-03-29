@@ -1,0 +1,39 @@
+"kernelSource": {
+  "name": "Pixel 6 Pro",
+  "repo": "https://github.com/freak07/Kirisakura_Raviole",
+  "branch": "pantah-tq2a.230505",
+  "device": "gs101",
+  "defconfig": "arch/arm64/configs/gki_defconfig"
+}
+
+"toolchains": [
+  {
+    "name": "clang-r522817",
+    "repo": "https://gitlab.com/yaosp/prebuilts_clang_host_linux-x86/-/tree/fourteen/clang-r522817",
+    "branch": "master",
+    "binaryEnv": ["./bin"]
+  }
+]
+"enableCcache": true,
+"enableKernelSU": true,
+"params": {
+   "ARCH": "arm64",
+   "CC": "clang",
+   "externalCommands": {
+     "CLANG_TRIPLE": "aarch64-linux-gnu-",
+     "CROSS_COMPILE": "aarch64-linux-android-",
+     "CROSS_COMPILE_ARM32": "arm-linux-androideabi-",
+     "LD": "ld.lld",
+     "AR": "llvm-ar",
+     "NM": "llvm-nm",
+     "OBJCOPY": "llvm-objcopy",
+     "OBJDUMP": "llvm-objdump",
+     "READELF": "llvm-readelf",
+     "OBJSIZE": "llvm-size",
+     "STRIP": "llvm-strip",
+     "LDGOLD": "aarch64-linux-gnu-ld.gold",
+     "LLVM_AR": "llvm-ar",
+     "LLVM_DIS": "llvm-dis",
+     "CONFIG_THINLTO": ""
+   }
+}
